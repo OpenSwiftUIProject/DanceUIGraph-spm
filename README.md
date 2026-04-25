@@ -4,6 +4,8 @@ This package vends prebuilt `DanceUIGraph` and `DanceUIRuntime` XCFrameworks for
 
 Repository: `OpenSwiftUIProject/DanceUIGraph-spm`
 
+Current release: `0.0.1`
+
 ## Artifacts
 
 - `DanceUIGraph.xcframework.zip`
