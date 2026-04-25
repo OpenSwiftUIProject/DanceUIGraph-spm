@@ -1,15 +1,15 @@
 # DanceUIGraph SwiftPM Binary Package
 
-This package vends prebuilt `DanceUIGraph` and `DanceUIRuntime` XCFrameworks for iOS and iOS Simulator.
+This package vends prebuilt `DanceUIGraph` and `DanceUIRuntime` XCFrameworks for iOS 13 and iOS Simulator.
 
 Repository: `OpenSwiftUIProject/DanceUIGraph-spm`
 
 ## Artifacts
 
 - `DanceUIGraph.xcframework.zip`
-  - Checksum: `cef6150cc4fcf7cf988424599f4593fb07f3b2680066df1c61795e5bed92e163`
+  - Checksum: `c5975153aa148394ead0182a7286c76877b2edca1ad587ac5c815420437de0e3`
 - `DanceUIRuntime.xcframework.zip`
-  - Checksum: `b60bdd1d8b9d204aa73e40e7c2621d4d761d393c422e4fa41a5b40056c312f4c`
+  - Checksum: `020f4853a71344d8b2f3b028fd7ed6eeaf99c1dcd11e42f53eed1593ef8fba42`
 
 The artifacts are built from sibling checkouts of `DanceUIGraph`, `DanceUIRuntime`, and `DanceUIDependencies` with:
 
