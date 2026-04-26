@@ -2,6 +2,11 @@
 
 import PackageDescription
 
+let linkerSettings: [LinkerSetting] = [
+    .linkedLibrary("c++"),
+    .linkedLibrary("z"),
+]
+
 let package = Package(
     name: "DanceUIGraph",
     platforms: [
@@ -27,6 +32,14 @@ let package = Package(
             name: "DanceUIGraph",
             url: "https://github.com/OpenSwiftUIProject/DanceUIGraph/releases/download/0.0.3/DanceUIGraph.xcframework.zip",
             checksum: "c9bf980c6ef6730e74d1b1930ac932672824d6aa1e96766b57c736913ea975d1"
+        ),
+        .testTarget(
+            name: "DanceUIGraphTests",
+            dependencies: [
+                "DanceUIRuntime",
+                "DanceUIGraph",
+            ],
+            linkerSettings: linkerSettings
         ),
     ]
 )
