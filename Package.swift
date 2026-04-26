@@ -20,13 +20,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "DanceUIRuntime",
-            url: "https://github.com/OpenSwiftUIProject/DanceUIGraph-spm/releases/download/0.0.2/DanceUIRuntime.xcframework.zip",
-            checksum: "ca2572173cdd2b4150599aaa6f7ebb5a3dd5059951a4f23da0070d9c59c4a9fc"
+            url: "https://github.com/OpenSwiftUIProject/DanceUIGraph/releases/download/0.0.3/DanceUIRuntime.xcframework.zip",
+            checksum: "f961c4a14bec5d24247e6e533725241e9b18e36b5ecc081d552e0c906b7281b9"
         ),
         .binaryTarget(
             name: "DanceUIGraph",
-            url: "https://github.com/OpenSwiftUIProject/DanceUIGraph-spm/releases/download/0.0.2/DanceUIGraph.xcframework.zip",
-            checksum: "030d3d2a1d4c6d076c08d5d967295760c5014ecf3c982d9f8e638275d6a9ca6e"
+            url: "https://github.com/OpenSwiftUIProject/DanceUIGraph/releases/download/0.0.3/DanceUIGraph.xcframework.zip",
+            checksum: "c9bf980c6ef6730e74d1b1930ac932672824d6aa1e96766b57c736913ea975d1"
         ),
     ]
 )

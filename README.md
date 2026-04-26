@@ -2,6 +2,7 @@
 
 This package vends prebuilt `DanceUIGraph` and `DanceUIRuntime` XCFrameworks for SwiftPM consumers.
 
+The SwiftPM wrapper lives in `OpenSwiftUIProject/DanceUIGraph-spm`. The binary XCFramework release assets are hosted on `OpenSwiftUIProject/DanceUIGraph`.
 
 ## Supported XCFramework Slices
 
@@ -36,6 +37,19 @@ Then depend on the `DanceUIGraph` product:
     ]
 )
 ```
+
+## Binary Artifacts
+
+The `0.0.3` package manifest downloads both artifacts from:
+
+```text
+https://github.com/OpenSwiftUIProject/DanceUIGraph/releases/tag/0.0.3
+```
+
+- `DanceUIGraph.xcframework.zip`
+  - Checksum: `c9bf980c6ef6730e74d1b1930ac932672824d6aa1e96766b57c736913ea975d1`
+- `DanceUIRuntime.xcframework.zip`
+  - Checksum: `f961c4a14bec5d24247e6e533725241e9b18e36b5ecc081d552e0c906b7281b9`
 
 ## Build Notes
 
