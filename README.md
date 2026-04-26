@@ -2,15 +2,14 @@
 
 This package vends prebuilt `DanceUIGraph` and `DanceUIRuntime` XCFrameworks for SwiftPM consumers.
 
-Repository: `OpenSwiftUIProject/DanceUIGraph-spm`
 
-Current release: `0.0.2`
+## Supported XCFramework Slices
 
-## Supported Platforms
+The binary artifacts support:
 
-- iOS 13.0+
-- iOS Simulator 13.0+
-- macOS 10.15+
+- iOS device: `ios-arm64`, iOS 13.0+
+- iOS Simulator: `ios-arm64_x86_64-simulator`, iOS 13.0+
+- macOS: `macos-arm64_x86_64`, macOS 10.15+
 
 ## Usage
 
@@ -19,7 +18,7 @@ Add the package dependency:
 ```swift
 .package(
     url: "https://github.com/OpenSwiftUIProject/DanceUIGraph-spm.git",
-    exact: "0.0.2"
+    from: "0.0.3"
 )
 ```
 
@@ -38,12 +37,7 @@ Then depend on the `DanceUIGraph` product:
 )
 ```
 
-## Artifacts
-
-- `DanceUIGraph.xcframework.zip`
-  - Checksum: `030d3d2a1d4c6d076c08d5d967295760c5014ecf3c982d9f8e638275d6a9ca6e`
-- `DanceUIRuntime.xcframework.zip`
-  - Checksum: `ca2572173cdd2b4150599aaa6f7ebb5a3dd5059951a4f23da0070d9c59c4a9fc`
+## Build Notes
 
 The artifacts are built from sibling checkouts of `DanceUIGraph`, `DanceUIRuntime`, and `DanceUIDependencies` with:
 
@@ -51,3 +45,15 @@ The artifacts are built from sibling checkouts of `DanceUIGraph`, `DanceUIRuntim
 cd ../DanceUIGraph
 SKIP_POD_INSTALL=1 scripts/build-xcframework.sh
 ```
+
+Before cutting `0.0.3`, verify the generated umbrella headers do not import UIKit or Cocoa:
+
+```sh
+rg -n '#import <(UIKit|Cocoa)/|UIKit/UIKit.h|Cocoa/Cocoa.h' \
+  DanceUIGraphApp/build/archives \
+  DanceUIGraphApp/build/xcframeworks \
+  -g '*umbrella.h' \
+  -g 'module.modulemap'
+```
+
+The command should produce no matches.
